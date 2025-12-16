@@ -1,5 +1,5 @@
 output "iam_role_arn" {
-  description = "ARN of the IAM role with Policy 1600 misconfiguration"
+  description = "ARN of the secure IAM role (Policy 1600 fixed)"
   value       = aws_iam_role.policy_1600_role.arn
 }
 
