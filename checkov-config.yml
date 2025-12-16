@@ -1,0 +1,22 @@
+# Checkov configuration file
+framework:
+  - terraform
+
+skip_checks:
+  # Uncomment to skip specific checks if needed
+  # - CKV_AWS_1  # Example: Skip check for ensuring IAM policies are attached only to groups or roles
+
+soft_fail: false
+
+check:
+  - CKV_AWS_*  # Run all AWS checks
+
+quiet: false
+compact: false
+
+external_checks_dir:
+  - .checkov
+
+output: cli
+
+download_external_modules: true

@@ -1,0 +1,18 @@
+# Gitleaks configuration for secrets scanning
+title = "Gitleaks Secrets Scanning"
+
+[extend]
+# Use default rules
+useDefault = true
+
+[allowlist]
+description = "Allowlist for false positives"
+paths = [
+  '''\.git/''',
+  '''\.terraform/''',
+  '''\.github/workflows/.*\.yml''',
+]
+
+[allowlist.regexes]
+commits = '''^Merge.*'''
+description = "Allow merge commits"
